@@ -67,13 +67,21 @@ var DogSchema = new Schema({
       type: String,
       trim: false,
     },
-
+    Notes: {
+      type: String,
+      trim: false,
+    },
   // email: a string that's checked with regex to ensure it's in the expected format
   email: {
     type: String,
     unique: true,
     match: [/.+\@.+\..+/, "Please enter a valid e-mail address"]
   },
+
+    Codes: {
+      type: String,
+      trim: false,
+    },
 
   // userCreated: just the current date
   userCreated: {
