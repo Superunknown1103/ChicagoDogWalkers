@@ -1,0 +1,55 @@
+-Clientside database
+	-convert information from database into pretty front-end
+	-use a database like Firebase for the walkers
+	-create a manager-side view where all walks can be deleted and created
+
+-Media queries so that the app fully functions on a mobile phone
+
+-Create sample database of 10 walkers with 10-12 dogs with different price points
+Schedule for every walker for M-F
+Make checkbox system
+Make walk report conversion system
+automation system for dogs that are walked everyday
+have walk report convert into weekly paycheck
+have walk reports convert into 1st - 30th billing cycle system
+They want to know who the past walkers were for their clients
+2 views: manager view and walker view
+
+
+Sample walking system:
+PetCloud
+
+
+Contact Details for client:
+2 Client Names
+First Name
+Last Name
+Phone 1
+Phone 2
+Address
+Zipcode
+Email
+Walker
+Dog
+Window of Time to be Walked:
+Days of the Week:
+Alarm Codes:
+Door Codes:
+Lockbox Code:
+
+2nd First Name
+2nd Last Name
+Phone 3
+Phone 4
+Notes:
+
+Additional Info:
+Start Date
+Keys Received: dropdown menu - 1 set of keys, 2 set of keys, doorman
+Payment
+Rate
+Referred by
+Termination Date
+Termination Reason
+Keys Destroyed/Lost
+
