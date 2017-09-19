@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Doggo Database</title>
+    <style>
+      input {
+        display: block;
+        height: 30px;
+        font-size: 24px;
+        color: black;
+      }
+      textarea {
+        display: block;
+        font-size: 20px;
+      }
+      .newdoggo {
+        display: block;
+        font-size: 24px;
+        margin: 10px;
+        color: black;
+      }
+    </style>
+  </head>
+  <div class="newdoggo"><strong>Looks like we have a new doggo! Let's put him in the database. Sections marked with an * are required.</strong></div>
+  <body>
+    <form action="/submit" method="post">
+      <input type="text" name="ClientName1" placeholder="ClientName1*">
+      <input type="text" name="ClientName2" placeholder="ClientName2*">
+      <input type="text" name="FirstNameDog" placeholder="First name of dog*">
+      <input type="text" name="LastNameDog" placeholder="Last name of dog*">
+      <input type="text" name="Phone" placeholder="Phone number(no dashes)*">
+      <input type="text" name="Walker" placeholder="Assigned Walker*">
+      <input type="text" name ="Address" placeholder="address*">
+      <input type="text" name ="Zipcode" placeholder="zipcode*">
+      <input type="text" name ="email" placeholder="email*">
+      <input type="text" name ="WindowOfTime" placeholder="Window of time to be walked between">
+      <input type="text" name ="DaysOftheWeek" placeholder="Typical days of the week">
+      <input type="text" name ="Codes" placeholder="Alarm, door, and lockbox codes">
+      <textarea type="text" rows = "3" cols = "80" name ="Notes" placeholder="Any notes about the dog."></textarea>
+
+
+      <input type="submit">
+    </form>
+  </body>
+</html>

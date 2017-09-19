@@ -12,6 +12,7 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var logger = require("morgan");
 var mongoose = require("mongoose");
+var path = require("path");
 // Set mongoose to leverage built in JavaScript ES6 Promises
 mongoose.Promise = Promise;
 
@@ -50,6 +51,10 @@ db.once("open", function() {
 
 // Routes
 // ======
+
+app.get("/report", function(req, res) {
+  res.sendFile(path.join(__dirname, "./public/walkreport.html"));
+});
 
 // This route handles submissions of the form
 app.post("/submit", function(req, res) {
