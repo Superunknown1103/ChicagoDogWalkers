@@ -5,10 +5,23 @@
 var mongoose = require("mongoose");
 
 // Create the Schema class
-var Schema = mongoose.Schema;
+var DogSchema = mongoose.Schema;
+var WalkerSchema = mongoose.Schema;
+
+var WalkerSchema = new WalkerSchema({
+  WalkerPass: {
+    type: String,
+    required: "Walker pass is required",
+    validate: [
+      function(input) {
+        return input.value = "password";
+      }
+    ]
+  }
+})
 
 // Instantiate a new Schema, UserSchema
-var DogSchema = new Schema({
+var DogSchema = new DogSchema({
   // username: a required, trimmed string
     ClientName1: {
     type: String,
@@ -118,7 +131,9 @@ DogSchema.methods.makeCool = function() {
 };
 
 // Pass the schema to the User model
-var User = mongoose.model("User", DogSchema);
+var Dog = mongoose.model("Dog", DogSchema);
+var Walker = mongoose.model("Walker", WalkerSchema);
 
 // Export the User model
-module.exports = User;
+module.exports = Dog;
+module.exports = Walker;

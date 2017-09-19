@@ -62,10 +62,28 @@ app.get("/report", function(req, res) {
 
 
 // This route handles submissions of the form
+
+app.post("/submitlogin", function(req, res) {
+
+  var Walker = new Example(req.body);
+
+  Walker.save(function(error, doc) {
+    // Send an error to the browser
+    if (error) {
+      res.send(error);
+    }
+    // Or send the doc to our browser
+    else {
+      res.send(doc);
+    }
+  });
+
+});
+
 app.post("/submit", function(req, res) {
 
   // Make a user object with our model and the body of our request
-  var user = new Example(req.body);
+  var dog = new Example(req.body);
 
 
 /* OUR CUSTOM METHODS
@@ -73,17 +91,17 @@ app.post("/submit", function(req, res) {
  * -/-/-/-/-/-/-/-/-/ */
 
   // Calling coolifier method
-  user.coolifier();
-
-  // Calling makeCool method
-  user.makeCool();
-
-// END OF CUSTOM METHODS
+//   dog.coolifier();
+//
+//   // Calling makeCool method
+//   dog.makeCool();
+//
+// // END OF CUSTOM METHODS
 // =====================
 // NORMAL METHOD BELOW
 
   // Save a user to our mongoDB
-  user.save(function(error, doc) {
+  dog.save(function(error, doc) {
     // Send an error to the browser
     if (error) {
       res.send(error);
