@@ -52,9 +52,14 @@ db.once("open", function() {
 // Routes
 // ======
 
+app.get("/walkerlogin", function(req, res) {
+  res.sendFile(path.join(__dirname, "./public/walkerlogin.html"));
+});
+
 app.get("/report", function(req, res) {
   res.sendFile(path.join(__dirname, "./public/walkreport.html"));
 });
+
 
 // This route handles submissions of the form
 app.post("/submit", function(req, res) {
